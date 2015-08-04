@@ -410,7 +410,7 @@ public abstract class BasePullToRefreshLayout extends ViewGroup {
 
         currentDragPercent = targetPercent;
         notifyOnPercentage(currentDragPercent, true);
-        target.setPadding(targetPaddingLeft, targetPaddingTop, targetPaddingRight, targetPaddingBottom + targetTop);
+        target.setPadding(targetPaddingLeft, targetPaddingTop, targetPaddingRight, targetPaddingBottom);
         setTargetOffsetTop(offset, false);
     }
 

@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.eftimoff.path.PathPullToRefreshLayout;
+import com.eftimoff.pulltorefresh.PathPullToRefreshLayout;
 import com.eftimoff.pulltorefresh.listeners.OnRefreshListener;
 
 import java.util.ArrayList;
