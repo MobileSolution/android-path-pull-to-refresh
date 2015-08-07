@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -48,7 +47,7 @@ public class PathPullToRefreshLayout extends BasePullToRefreshLayout {
             pathColor = typedArray.getColor(R.styleable.PathPullToRefreshLayout_pptrPathColor, Color.WHITE);
             setPathColor(pathColor);
 
-            backgroundColor = typedArray.getColor(R.styleable.PathPullToRefreshLayout_pptrBackgroundColor, Color.LTGRAY);
+            backgroundColor = typedArray.getColor(R.styleable.PathPullToRefreshLayout_pptrBackgroundColor, Color.TRANSPARENT);
             setBackgroundAColor(backgroundColor);
         } finally {
             typedArray.recycle();
@@ -83,18 +82,16 @@ public class PathPullToRefreshLayout extends BasePullToRefreshLayout {
     private OnPullToRefreshListener onPullToRefreshListener = new OnPullToRefreshListener() {
         @Override
         public void onStart() {
-            Log.i("!!!!!!!!!!!!!!!!!!!!!", "onStart");
         }
 
         @Override
         public void onPercent(final float percent, final boolean invalidate) {
             pathView.setPercentage(percent);
-            Log.i("!!!!!!!!!!!!!!!!!!!!!", "onPercent : " + percent + " " + invalidate);
         }
 
         @Override
         public void onStop() {
-            Log.i("!!!!!!!!!!!!!!!!!!!!!", "onStop");
+
         }
     };
 
